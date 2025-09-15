@@ -1,0 +1,402 @@
+:root {
+    --primary-color: #006a4e; /* Haryana green */
+    --secondary-color: #f9a01b; /* Haryana orange */
+    --light-bg: #f5f7fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+/* ------------------------- */
+/* ----- Dark Mode CSS ----- */
+/* ------------------------- */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5; /* Base light text color for dark mode */
+}
+
+/* General fixes for text visibility in dark mode */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+    color: inherit; /* Ensure headings inherit the light text color */
+}
+
+.dark-mode a {
+    color: var(--secondary-color); /* Make links readable */
+}
+
+.dark-mode a:hover {
+    color: #d48a17;
+}
+
+.dark-mode .text-muted {
+    color: #aaa !important;
+}
+
+/* Component-specific dark mode styles */
+.dark-mode .navbar-dark {
+    background-color: #1e1e1e !important;
+}
+
+.dark-mode .card,
+.dark-mode .filter-section,
+.dark-mode .search-container,
+.dark-mode .chatbot-container,
+.dark-mode .chatbot-header,
+.dark-mode .chatbot-input {
+    background-color: #1e1e1e !important;
+    color: #f5f5f5 !important;
+    border-color: #333 !important;
+}
+
+.dark-mode .scheme-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .scheme-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select,
+.dark-mode .input-group-text {
+    background-color: #2d2d2d !important;
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+}
+
+/* Fix for placeholder text visibility */
+.dark-mode .form-control::placeholder {
+    color: #aaa !important;
+    opacity: 1; /* Override Firefox's default opacity */
+}
+
+.dark-mode .hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&id=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+}
+
+.dark-mode .footer {
+    background-color: #1a1a1a !important;
+}
+
+.dark-mode .footer a {
+    color: #f5f5f5 !important; /* Keep footer links white */
+}
+
+.dark-mode .badge-category {
+    background-color: #2d3a4d !important;
+    color: #a8c7fa !important;
+}
+
+.dark-mode .badge-ministry {
+    background-color: #1e3a1e !important;
+    color: #a8f5a8 !important;
+}
+
+.dark-mode .badge-state {
+    background-color: #4a2c0d !important;
+    color: #ffcc99 !important;
+}
+
+.dark-mode .eligibility-criteria {
+    background-color: #2d2d2d !important;
+    border-left-color: var(--secondary-color) !important;
+}
+
+.dark-mode .chatbot-messages {
+    background-color: #121212 !important;
+}
+
+.dark-mode .message.bot-message {
+    background-color: #2d2d2d !important;
+    color: #f5f5f5 !important;
+}
+
+.dark-mode .read-more-btn {
+    color: var(--secondary-color) !important; /* Keep specific link color */
+}
+
+/* Dark Mode styles for Notification */
+.dark-mode .notification-dropdown .dropdown-menu {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+.dark-mode .notification-item {
+    color: #f5f5f5; /* Ensure notification text is light */
+    border-bottom-color: #444;
+}
+
+.dark-mode .notification-item:hover {
+    background-color: #3a3a3a;
+}
+
+/* -------------------------- */
+/* ----- Light Mode CSS ----- */
+/* -------------------------- */
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.navbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&id=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.scheme-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+}
+
+.scheme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.badge-category {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.badge-ministry {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge-state {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.filter-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+.scroll-top-btn:hover {
+    background-color: #d48a17;
+    transform: scale(1.1);
+}
+
+.chatbot-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chatbot-btn:hover {
+    transform: scale(1.1);
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chatbot-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f5f7fa;
+}
+
+.chatbot-input {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid #eee;
+}
+
+.message {
+    margin-bottom: 10px;
+    max-width: 80%;
+    padding: 8px 12px;
+    border-radius: 18px;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: var(--primary-color);
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.bot-message {
+    background-color: #e9ecef;
+    color: #212529;
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+}
+
+.read-more-btn {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+}
+
+.eligibility-criteria {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--secondary-color);
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+.notification-dropdown .dropdown-menu {
+    width: 320px;
+    padding: 0;
+}
+
+.notification-item {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #333;
+    white-space: normal;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item:hover {
+    background-color: #f8f9fa;
+}
+
+.notification-item .fw-bold {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.notification-item .text-muted {
+    font-size: 0.8rem;
+}
+
+/* -------------------- */
+/* --- Media Queries -- */
+/* -------------------- */
+
+@media (max-width: 991px) {
+    .navbar-controls {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .chatbot-container {
+        width: 90%;
+        right: 5%;
+        height: 70vh;
+        bottom: 80px;
+    }
+    
+    .hero-section {
+        padding: 2rem 0;
+    }
+}
